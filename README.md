@@ -1,4 +1,11 @@
-# TicTacToe With ReactJS TypeScript NextJS
+# TicTacToe with ReactJS TypeScript NextJS
+
+
+  <img src="./.github/images/windows/home.png" alt='Logo TicTacToe'/>
+
+  <br/>
+  <br/>
+  <br/>
 
 <!-- PROJECT SHIELDS -->
 [![Contributors][contributors-shield]][contributors-url]
@@ -10,7 +17,7 @@
 
 <!-- PROJECT LOGO -->
 
-<img src="" alt='Logo of the project' />
+
 
 
 <!-- TABLE OF CONTENTS -->
@@ -42,7 +49,7 @@
 ## About The Project
 It project consists in an application web of game board TicTacToe built with ReactJS, TypeScript, NextJS, Context API, HTML, CSS.
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](./.github/images/windows/switchName.png)
 
 ### Built With
 Technologies used to create the project
@@ -135,4 +142,4 @@ Project Link: [https://github.com/andreteixeira98/TicTacToe-With-ReactJS-TypeScr
 [license-url]: https://github.com/andreteixeira98/TicTacToe-With-ReactJS-TypeScript-NextJS/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/andre-teixeira-83a822186
-[product-screenshot]: 
+[product-screenshot]: ./.github/images/windows/switchName.png

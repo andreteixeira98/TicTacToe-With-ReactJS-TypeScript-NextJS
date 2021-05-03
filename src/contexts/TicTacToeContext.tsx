@@ -5,6 +5,7 @@ import {
     useEffect,
     useState
 } from "react";
+
 import imageCircle from '../images/circle.png';
 import imageTriangle from '../images/triangle.png';
 interface playerProps {
