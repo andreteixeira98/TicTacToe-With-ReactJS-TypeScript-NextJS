@@ -1,0 +1,7 @@
+.container{
+    display: flex;
+    flex-direction:row;
+
+    height:360px;
+    width:300px;
+}

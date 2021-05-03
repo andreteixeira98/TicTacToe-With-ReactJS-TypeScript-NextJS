@@ -1,0 +1,188 @@
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    background: linear-gradient(329.54deg, #29B6D1 0%, #00C7C7 100%);
+    align-items: center;
+    justify-content:space-around;
+
+    width: 100vw;
+    height: 100vh;
+   
+
+
+}
+
+.container .main{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: space-between;
+
+   
+    height:450px;
+}
+.container .main header{
+    display: flex;
+    flex-direction:row;
+}
+.container .main header h1{
+    font-size: 3rem;
+    font-weight: 600;
+    filter: brightness(1.2);
+
+}
+.container .main form{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content:space-between;
+
+    width: 300px;
+    height:30px;
+  
+}
+.container .main form input{
+    display: flex;
+    text-align: center;
+    width: 115px;
+    height:30px;
+    border:1px solid var(--white);
+    outline-color: var(--white);
+    background-color: var(--green);
+    color:var(--white);
+    font-size:16px;
+    font-weight: 600;
+    border-radius: 5px;
+    text-decoration-color: aliceblue;
+    transition: size 0.3s;
+    filter: brightness(1.1);
+}
+.container .main form input:hover{
+    width: 118px;
+    height:35px;
+    font-size: 18px;
+    border-radius: 10px;
+    filter: brightness(1.2);
+}
+
+.container .main form input::-webkit-input-placeholder {
+    color:var(--white);
+ }
+ 
+ .container .main form input::-moz-placeholder {  /* Firefox 19+ */
+    color:var(--white); 
+ }
+ 
+ .container .main form input:-ms-input-placeholder {  
+    color: var(--white);  
+ }
+.container .main form span{
+    width:70px;
+    height:40px;
+    line-height: 40px;
+    border:1px solid var(--gray-line);
+    outline-color: var(--gray-line);
+    background-color: var(--blue);
+    color:var(--white);
+    font-size:18px;     
+    font-weight: 600;
+    border-radius: 5px;
+    text-decoration-color: aliceblue;
+    text-align: center;
+    filter: brightness(1.1);
+}
+
+
+.container .main .gameBoard {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    
+
+    width:300px;
+    height:360px;
+    
+}
+
+
+.container .main .buttonStart{
+    background-color: var(--green);
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 600;
+    width:300px;
+    height:70px;
+    border: solid var(--gray-line);
+    border-radius: 10px;
+    filter: brightness(1.1);
+}
+.container .main .buttonStart:hover{
+    width:305px;
+    height:72px;
+    filter: brightness(1.2);
+}
+.container .main .divButtonsRestartExit{
+    display: flex;
+    flex-direction:row;
+
+    width:300px;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.container .main .divButtonsRestartExit .buttonRestart{
+    background-color: var(--green);
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 600;
+    width:130px;
+    height:50px;
+    border: solid var(--gray-line);
+    border-radius: 5px;
+    filter: brightness(1.1);
+}
+.container .main .divButtonsRestartExit .buttonRestart:hover{
+    width:132px;
+    height:52px;
+    filter: brightness(1.2);
+}
+.container .main .divButtonsRestartExit .buttonExit{
+    background-color: var(--red);
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 600;
+    width:130px;
+    height:50px;
+    border: solid var(--gray-line);
+    border-radius: 5px;
+    filter: brightness(1.1);
+}
+.container .main .divButtonsRestartExit .buttonExit:hover{
+    width:132px;
+    height:52px;
+    filter: brightness(1.2);
+}
+
+.container .footer{
+    position:absolute;
+    bottom: 15px;
+    color:var(--white);
+    font-size: 16px;
+    font-weight: 600;
+}
+.container .footer a{
+    color: var(--blue-dark);
+    font-size: 16px;
+    font-weight: 600;
+    
+    
+}
+
+
+

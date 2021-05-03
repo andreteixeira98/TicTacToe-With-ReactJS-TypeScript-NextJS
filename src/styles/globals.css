@@ -1,0 +1,18 @@
+*{
+  padding:0;
+  margin: 0;
+}
+
+:root{
+  --white:#fff;
+  --background: #f2f3f5;
+  --gray-line:#DCDDE0;
+  --text: #666666;
+  --text-highlight:#b3b9ff;
+  --title:#2e384b;
+  --red:#e83f5b;
+  --green:#4cd62b;
+  --blue:#5965e0;
+  --blue-dark:#4953b8;
+  --blue-twitter:#2aa9e0;
+}
