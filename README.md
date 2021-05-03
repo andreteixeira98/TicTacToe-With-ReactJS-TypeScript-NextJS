@@ -1,7 +1,12 @@
 # TicTacToe with ReactJS TypeScript NextJS
 
 
+  <a 
+    href="https://tictactoe-five.vercel.app/"
+    target="_blank"
+  >
   <img src="./.github/images/windows/home.png" alt='Logo TicTacToe'/>
+  </a>
 
   <br/>
   <br/>
@@ -49,7 +54,7 @@
 ## About The Project
 It project consists in an application web of game board TicTacToe built with ReactJS, TypeScript, NextJS, Context API, HTML, CSS.
 
-[![Product Name Screen Shot][product-screenshot]](./.github/images/windows/switchName.png)
+[![Product Name Screen Shot][product-screenshot]](https://tictactoe-five.vercel.app/)
 
 ### Built With
 Technologies used to create the project
@@ -120,7 +125,7 @@ git clone https://github.com/andreteixeira98/TicTacToe-With-ReactJS-TypeScript-N
 
 André Teixeira - [Facebook](https://www.facebook.com/andreteixeiravaz) - andreteixeiracbjr@gmail.com
 
-Project Link: [https://github.com/andreteixeira98/TicTacToe-With-ReactJS-TypeScript-NextJS.git](https://github.com/andreteixeira98/TicTacToe-With-ReactJS-TypeScript-NextJS)
+Project Link: [TicTacToe](https://tictactoe-five.vercel.app/)
 
 
 <!-- ACKNOWLEDGEMENTS -->
