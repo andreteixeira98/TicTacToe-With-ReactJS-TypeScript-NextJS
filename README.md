@@ -1,11 +1,8 @@
 # TicTacToe with ReactJS TypeScript NextJS
 
 
-  <a 
-    href="https://tictactoe-five.vercel.app/"
-    target="_blank"
-  >
-  <img src="./.github/images/windows/home.png" alt='Logo TicTacToe'/>
+  <a href="https://tictactoe-five.vercel.app/" target="_blank">
+    <img src="./.github/images/windows/home.png" alt='Logo TicTacToe'/>
   </a>
 
   <br/>
