@@ -128,6 +128,7 @@ Project Link: [TicTacToe](https://tictactoe-five.vercel.app/)
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 * [Next-Images](https://www.npmjs.com/package/next-images)
+* [React-Icons](https://react-icons.github.io/react-icons/)
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
