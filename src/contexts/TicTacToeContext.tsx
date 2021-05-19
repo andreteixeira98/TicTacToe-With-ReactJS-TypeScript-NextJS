@@ -94,8 +94,6 @@ function TicTacToeProvider({ children }: TicTacToeProviderProps) {
         restartGameBoard();
         setCounter(0);
         setWinner(-1);
-        resetPlayer1();
-        resetPlayer2();
         setIsCongratulations(false);
         setIsDraw(false);
     }

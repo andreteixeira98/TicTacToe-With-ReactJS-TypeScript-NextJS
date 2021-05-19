@@ -6,7 +6,7 @@
     align-items: center;
     justify-content:space-around;
 }
-.container .congratulationsScreen{
+.container .gameScreenEndedCongratulations{
     width:400px;
     height:450px;
     display: flex;
@@ -14,8 +14,6 @@
     justify-content: space-evenly;
     align-items: center;
     
-    
-
     border:3px solid var(--gray-line);
 
     
@@ -23,7 +21,7 @@
 
 }
 
-.container .congratulationsScreen .divCloseButton{
+.container .gameScreenEndedCongratulations .divCloseButton{
     position: relative;
     height:70px;
     width:100%;
@@ -37,7 +35,7 @@
     color:var(--gray-line);
     
 }
-.container .congratulationsScreen h1{
+.container .gameScreenEndedCongratulations h1{
     width:100%;
     height:50px;
     font-size: 35px;
@@ -47,7 +45,7 @@
     text-align: center;
     filter:brightness(1.1);
 }
-.container .congratulationsScreen .congratulationsImage{
+.container .gameScreenEndedCongratulations .congratulationsImage{
     width:200px;
     height:250px;
 }

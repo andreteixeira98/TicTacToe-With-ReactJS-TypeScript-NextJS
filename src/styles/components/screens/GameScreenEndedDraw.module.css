@@ -6,7 +6,7 @@
     align-items: center;
     justify-content:space-around;
 }
-.container .drawScreen{
+.container .gameScreenEndedDraw{
     width:400px;
     height:450px;
     display: flex;
@@ -16,7 +16,7 @@
     border:3px solid var(--gray-line);
     background: linear-gradient(329.54deg, #29B6D1 0%, #00C7C7 100%);
 }
-.container .drawScreen .divCloseButton{
+.container .gameScreenEndedDraw .divCloseButton{
     position: relative;
     height:70px;
     width:100%;
@@ -26,7 +26,7 @@
     justify-content:center;
     color:var(--gray-line);  
 }
-.container .drawScreen h1{
+.container .gameScreenEndedDraw h1{
     width:100%;
     height:50px;
     font-size: 35px;
@@ -36,7 +36,7 @@
     text-align: center;
     filter:brightness(1.1);
 }
-.container .drawScreen .drawImage{
+.container .gameScreenEndedDraw .drawImage{
     width:150px;
     height:200px;
 }

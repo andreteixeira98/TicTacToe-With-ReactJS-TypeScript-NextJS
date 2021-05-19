@@ -1,4 +1,4 @@
-.gameScreen{
+.gameScreenStarted{
     height:450px;
     display: flex;
     flex-direction: column;
@@ -7,7 +7,7 @@
     justify-content: space-between;
 
 }
-.gameScreen .optionsRestartExitButtons{
+.gameScreenStarted .optionsRestartExitButtons{
     display: flex;
     flex-direction:row;
 

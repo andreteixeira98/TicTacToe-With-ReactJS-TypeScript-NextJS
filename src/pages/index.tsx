@@ -1,19 +1,9 @@
 import Head from 'next/head';
-import { useContext } from 'react';
-import CongratulationsScreen from '../components/screens/CongratulationsScreen';
-import DrawScreen from '../components/screens/DrawScreen';
-import GameScreen from '../components/screens/GameScreen';
-import InitialScreen from '../components/screens/InitialScreen';
-import { ticTacToeContext } from '../contexts/TicTacToeContext';
+import RunGame from '../components/main/RunGame';
 import imageTicTacToe from '../images/TicTacToe.png';
 import styles from '../styles/Home.module.css';
 
 const Home: React.FC = () => {
-  const {
-    isCongratulations,
-    isDraw,
-    gameStage
-  } = useContext(ticTacToeContext);
 
   return (
     <div className={styles.container}>
@@ -23,18 +13,7 @@ const Home: React.FC = () => {
         <link rel="icon" href={imageTicTacToe} />
       </Head>
 
-      <main>
-        {
-          gameStage === 'notStarted' ?
-
-            <InitialScreen />
-            :
-            (
-              isDraw ?
-                <DrawScreen /> : <GameScreen />
-            )
-        }
-      </main>
+      <RunGame />
     </div>
   )
 }

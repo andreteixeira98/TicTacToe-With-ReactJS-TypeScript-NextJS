@@ -1,5 +1,5 @@
 import Button from "./Button";
-import styles from "../styles/LineTicTacToe.module.css";
+import styles from "../styles/components/LineTicTacToe.module.css";
 import { memo } from "react";
 
 interface propsType {

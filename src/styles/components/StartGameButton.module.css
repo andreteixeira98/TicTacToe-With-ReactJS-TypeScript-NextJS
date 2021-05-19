@@ -1,4 +1,4 @@
-.startButton{
+.startGameButton{
     width:300px;
     background-color: var(--green);
     color: var(--white);
@@ -10,7 +10,7 @@
     border-radius: 10px;
     filter: brightness(1.1);
 }
-.startButton:hover{
+.startGameButton:hover{
         width:305px;
         height:72px;
         filter: brightness(1.2);

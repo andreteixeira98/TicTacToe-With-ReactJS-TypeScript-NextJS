@@ -1,13 +1,13 @@
 import { memo, useContext } from 'react';
 import { ticTacToeContext } from '../../contexts/TicTacToeContext';
 import congratulations from '../../images/congratulations.svg';
-import styles from '../../styles/components/screens/CongratulationsScreen.module.css';
+import styles from '../../styles/components/screens/GameScreenEndedCongratulations.module.css';
 import CloseButton from '../CloseButton';
 import ExitGameButton from '../ExitGameButton';
 import RestartGameButton from '../RestartGameButton';
 
 
-function CongratulationsScreen() {
+function GameScreenEndedCongratulations() {
     const {
         player1,
         player2,
@@ -15,7 +15,7 @@ function CongratulationsScreen() {
     } = useContext(ticTacToeContext);
     return (
         <div className={styles.container}>
-            <div className={styles.congratulationsScreen}>
+            <div className={styles.gameScreenEndedCongratulations}>
                 <div className={styles.divCloseButton}>
                     <CloseButton />
                 </div>
@@ -33,4 +33,4 @@ function CongratulationsScreen() {
     )
 }
 
-export default memo(CongratulationsScreen);
+export default memo(GameScreenEndedCongratulations);

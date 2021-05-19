@@ -1,15 +1,15 @@
 import { memo } from 'react';
 import drawImage from '../../images/draw.svg';
-import styles from '../../styles/components/screens/DrawScreen.module.css';
+import styles from '../../styles/components/screens/GameScreenEndedDraw.module.css';
 import CloseButton from '../CloseButton';
 import ExitGameButton from '../ExitGameButton';
 import RestartGameButton from '../RestartGameButton';
 
 
-function DrawScreen() {
+function GameScreenEndedDraw() {
     return (
         <div className={styles.container}>
-            <div className={styles.drawScreen}>
+            <div className={styles.gameScreenEndedDraw}>
                 <div className={styles.divCloseButton}>
                     <CloseButton />
                 </div>
@@ -27,4 +27,4 @@ function DrawScreen() {
     )
 }
 
-export default memo(DrawScreen);
+export default memo(GameScreenEndedDraw);

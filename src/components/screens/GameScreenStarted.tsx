@@ -1,14 +1,14 @@
 import { memo } from 'react';
-import styles from '../../styles/components/screens/GameScreen.module.css';
+import styles from '../../styles/components/screens/GameScreenStarted.module.css';
 import ExitGameButton from '../ExitGameButton';
 import GameBoard from '../GameBoard';
 import RestartGameButton from '../RestartGameButton';
 import ScoreBoard from '../ScoreBoard';
 
-function GameScreen() {
+function GameScreenStarted() {
 
     return (
-        <div className={styles.gameScreen}>
+        <div className={styles.gameScreenStarted}>
             <ScoreBoard />
             <GameBoard />
             <div className={styles.optionsRestartExitButtons}>
@@ -19,4 +19,4 @@ function GameScreen() {
     );
 }
 
-export default memo(GameScreen);
+export default memo(GameScreenStarted);

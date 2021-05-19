@@ -1,7 +1,7 @@
 import { memo, useContext, useEffect, useState } from 'react';
 import { ticTacToeContext } from '../contexts/TicTacToeContext';
 import ImageBlank from '../images/image-blank.png';
-import styles from '../styles/Button.module.css';
+import styles from '../styles/components/Button.module.css';
 
 interface propsType {
     lineNumber: number;
@@ -13,12 +13,12 @@ function Button(props: propsType) {
         setGameBoardValueByCoordinates,
         counterIncrement,
         gameStage,
-        startGame,
         player1,
         player2
     } = useContext(ticTacToeContext);
 
     const [image, setImage] = useState(ImageBlank);
+    const [imageAlt, setImageAlt] = useState('');
     const [isButtonDisabled, setIsButtonDisabled] = useState(false);
     function handleClick() {
 
@@ -26,11 +26,13 @@ function Button(props: propsType) {
         if (counter % 2 === 0) {
 
             setImage(player1.imageURL);
+            setImageAlt(`${player1.name}`)
             setGameBoardValueByCoordinates(0, props.lineNumber, props.columnNumber);
 
 
         } else {
             setImage(player2.imageURL);
+            setImageAlt(`${player2.name}`)
             setGameBoardValueByCoordinates(1, props.lineNumber, props.columnNumber);
 
         }
@@ -59,10 +61,10 @@ function Button(props: propsType) {
                         className={styles.buttonDisabled}
                         disabled
                     >
-                        <img  
+                        <img
                             className={styles.img}
                             src={image}
-                            alt=""
+                            alt={imageAlt}
                             width={94}
                             height={116}
                         />
@@ -77,7 +79,7 @@ function Button(props: propsType) {
                         <img
                             className={styles.img}
                             src={image}
-                            alt=""
+                            alt={imageAlt}
                             width={94}
                             height={116}
                         />
