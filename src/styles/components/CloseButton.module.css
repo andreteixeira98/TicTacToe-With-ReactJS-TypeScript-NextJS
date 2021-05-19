@@ -1,0 +1,23 @@
+.closeButton{
+    position:absolute;
+    right: 2px;
+    top:2px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    outline: none;
+    border:1px solid var(--gray-line);
+    border-radius: 5px;
+    background-color: var(--red);
+    color:var(--white);
+    font-size: 20px;
+    filter: brightness(1.1);
+}
+.closeButton:hover{
+    width: 43px;
+    height:43px;
+    font-size:22px;
+    filter:brightness(1.2);
+}

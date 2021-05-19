@@ -8,30 +8,34 @@ import {
 
 import imageCircle from '../images/circle.png';
 import imageTriangle from '../images/triangle.png';
-interface playerProps {
+interface PlayerProps {
     name: string;
     imageURL: string;
     score: number;
 }
 interface ticTacToeContextProps {
-    player1: playerProps;
-    player2: playerProps;
+    player1: PlayerProps;
+    player2: PlayerProps;
     gameStage: 'notStarted' | 'started' | 'restarted' | 'finished';
     counter: number;
     gameBoard: number[][];
     winner: number;
+    isCongratulations: boolean;
+    isDraw: boolean;
+    setIsDraw: (isDraw: boolean) => void;
+    setIsCongratulations: (isCongratulations: boolean) => void;
     setGameBoardValueByCoordinates: (value: number, line: number, column: number) => void;
     counterIncrement: () => void;
     startGame: () => void;
     restartGame: () => void;
     exitGame: () => void;
+    setGameStage: (stage: string) => void;
 
 }
 interface TicTacToeProviderProps {
     children: ReactNode;
 }
 const ticTacToeContext = createContext({} as ticTacToeContextProps);
-
 
 function TicTacToeProvider({ children }: TicTacToeProviderProps) {
 
@@ -52,6 +56,8 @@ function TicTacToeProvider({ children }: TicTacToeProviderProps) {
     const [gameStage, setGameStage] = useState(null);
     const [winner, setWinner] = useState(-1);
     const [counter, setCounter] = useState(0);
+    const [isCongratulations, setIsCongratulations] = useState(false);
+    const [isDraw, setIsDraw] = useState(false);
     const [gameBoard, setGameBoard] = useState(
         [
             [-1, -1, -1],
@@ -60,6 +66,7 @@ function TicTacToeProvider({ children }: TicTacToeProviderProps) {
         ]
 
     );
+
 
     function resetPlayer1() {
         const newPlayer1 = {
@@ -87,15 +94,14 @@ function TicTacToeProvider({ children }: TicTacToeProviderProps) {
         restartGameBoard();
         setCounter(0);
         setWinner(-1);
+        resetPlayer1();
+        resetPlayer2();
+        setIsCongratulations(false);
+        setIsDraw(false);
     }
 
     function restartGame() {
-
         setGameStage("restarted");
-        restartGameBoard();
-        setCounter(0);
-        setWinner(-1);
-
     }
 
     function exitGame() {
@@ -105,6 +111,8 @@ function TicTacToeProvider({ children }: TicTacToeProviderProps) {
         setWinner(-1);
         resetPlayer1();
         resetPlayer2();
+        setIsCongratulations(false);
+        setIsDraw(false);
 
     }
     function setGameBoardValueByCoordinates(value: number, line: number, column: number) {
@@ -177,7 +185,6 @@ function TicTacToeProvider({ children }: TicTacToeProviderProps) {
 
         let sum = 0;
         for (let i = 0, j = 2; i < 3; i++, j--) {
-
             let coordinateValue = gameBoard[i][j];
             if (coordinateValue === -1) {
                 sum = -1;
@@ -185,7 +192,6 @@ function TicTacToeProvider({ children }: TicTacToeProviderProps) {
             } else {
                 sum += coordinateValue;
             }
-
         }
         if (sum === 0) {
             setWinner(0);
@@ -222,10 +228,6 @@ function TicTacToeProvider({ children }: TicTacToeProviderProps) {
         ];
         setGameBoard(newGameBoard);
     }
-
-
-
-
     useEffect(() => {
         checkWinnerInLines();
         checkWinnerInColumns();
@@ -234,15 +236,8 @@ function TicTacToeProvider({ children }: TicTacToeProviderProps) {
 
     }, [gameBoard]);
 
-
     useEffect(() => {
-        if (winner === 0) {
-            player1.score += 1;
-            alert(`winner: ${player1.name}`);
-            setGameStage("finished");
-        } else if (winner === 1) {
-            player2.score += 1;
-            alert(`winner: ${player2.name}`);
+        if (winner != -1) {
             setGameStage("finished");
         }
 
@@ -255,11 +250,19 @@ function TicTacToeProvider({ children }: TicTacToeProviderProps) {
     }, [counter]);
 
     useEffect(() => {
-        if (gameStage === "finished") {
-            if (counter === 9 && winner === -1) {
-                alert("draw");
+        if (gameStage === 'restarted') {
+            startGame();
+        }
+        else if (gameStage === "finished") {
+            if (winner === 0) {
+                player1.score += 1;
+                setIsCongratulations(true);
+            } else if (winner === 1) {
+                player2.score += 1;
+                setIsCongratulations(true);
+            } else {
+                setIsDraw(true);
             }
-            restartGame();
         }
 
     }, [gameStage]);
@@ -269,9 +272,14 @@ function TicTacToeProvider({ children }: TicTacToeProviderProps) {
                 player1,
                 player2,
                 gameStage,
+                setGameStage,
                 counter,
                 gameBoard,
                 winner,
+                isDraw,
+                setIsDraw,
+                isCongratulations,
+                setIsCongratulations,
                 setGameBoardValueByCoordinates,
                 counterIncrement,
                 startGame,
@@ -283,7 +291,6 @@ function TicTacToeProvider({ children }: TicTacToeProviderProps) {
         </ticTacToeContext.Provider>
     )
 }
-
 
 export { ticTacToeContext };
 export default memo(TicTacToeProvider);

@@ -1,31 +1,21 @@
 import Head from 'next/head';
-import { ChangeEvent, useContext } from 'react';
-import LineTicTacToe from '../components/LineTicTacToe';
+import { useContext } from 'react';
+import CongratulationsScreen from '../components/screens/CongratulationsScreen';
+import DrawScreen from '../components/screens/DrawScreen';
+import GameScreen from '../components/screens/GameScreen';
+import InitialScreen from '../components/screens/InitialScreen';
 import { ticTacToeContext } from '../contexts/TicTacToeContext';
 import imageTicTacToe from '../images/TicTacToe.png';
 import styles from '../styles/Home.module.css';
 
 const Home: React.FC = () => {
   const {
-    player1,
-    player2,
-    gameStage,
-    startGame,
-    restartGame,
-    exitGame
+    isCongratulations,
+    isDraw,
+    gameStage
   } = useContext(ticTacToeContext);
 
-  function handleGetNamePlayer1(event: ChangeEvent<HTMLInputElement>) {
-    player1.name = event.target.value;
-  }
-
-  function handleGetNamePlayer2(event: ChangeEvent<HTMLInputElement>) {
-    player2.name = event.target.value;
-  }
-
   return (
-
-
     <div className={styles.container}>
       <Head>
         <title>TicTacToe</title>
@@ -33,104 +23,18 @@ const Home: React.FC = () => {
         <link rel="icon" href={imageTicTacToe} />
       </Head>
 
-
-
-      <main className={styles.main}>
-        <header>
-          <h1 style={{ color: 'var(--blue)' }}>Tic</h1>
-          <h1 style={{ color: 'var(--red)' }}>Tac</h1>
-          <h1 style={{ color: 'var(--green)' }}>Toe</h1>
-        </header>
-
-        <br />
-
-
+      <main>
         {
-          (gameStage === "started" || gameStage === 'restarted') ?
-            (
-              <>
-                <form>
-                  <input
-                    type="text"
-                    placeholder={player1.name}
-                    autoFocus
-                    onChange={event => handleGetNamePlayer1(event)}
-                  />
-                  <span> {player1.score} X {player2.score} </span>
-                  <input
-                    type="text"
-                    placeholder={player2.name}
-                    onChange={event => handleGetNamePlayer2(event)}
-                  />
-                </form>
-                <br />
-                <div className={styles.gameBoard}>
-                  <LineTicTacToe lineNumber={0} />
-                  <LineTicTacToe lineNumber={1} />
-                  <LineTicTacToe lineNumber={2} />
-                </div>
-              </>
-            ) : (
-              <img
-                src={imageTicTacToe}
-                alt=""
-                width={300}
-                height={300}
-              />
-            )
-        }
+          gameStage === 'notStarted' ?
 
-        <br />
-        {
-          (gameStage === "notStarted" || !gameStage) ?
-            (
-              <button
-                className={styles.buttonStart}
-                onClick={startGame}
-              >
-                Start Game
-              </button>
-            )
+            <InitialScreen />
             :
             (
-              <div className={styles.divButtonsRestartExit}>
-
-                <button
-                  className={styles.buttonRestart}
-                  onClick={restartGame}
-                >
-                  Restart
-                </button>
-
-                <button
-                  className={styles.buttonExit}
-                  onClick={exitGame}
-                >
-                  Exit
-                </button>
-
-              </div>
+              isDraw ?
+                <DrawScreen /> : <GameScreen />
             )
         }
-
-
-
       </main>
-
-      <br />
-
-
-      <footer className={styles.footer}>
-
-        Powered by &nbsp;
-        <a
-          href="https://www.github.com/andreteixeira98"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {'André Teixeira'}
-        </a>
-      </footer>
     </div>
   )
 }

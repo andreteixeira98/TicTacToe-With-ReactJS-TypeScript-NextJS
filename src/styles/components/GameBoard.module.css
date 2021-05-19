@@ -1,0 +1,7 @@
+.gameBoard{
+    width:300px;
+    height:360px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}

@@ -1,0 +1,8 @@
+.InitialScreen{
+    height:400px;
+    width:300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;
+}

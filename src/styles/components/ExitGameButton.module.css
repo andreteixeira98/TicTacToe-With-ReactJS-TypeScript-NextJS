@@ -1,0 +1,16 @@
+.exitGameButton{
+    background-color: var(--red);
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 600;
+    width:130px;
+    height:50px;
+    border: solid var(--gray-line);
+    border-radius: 5px;
+    filter: brightness(1.1);
+}
+.exitGameButton:hover{
+    width:132px;
+    height:52px;
+    filter: brightness(1.2);
+}

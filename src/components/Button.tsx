@@ -48,7 +48,6 @@ function Button(props: propsType) {
         } else if (gameStage === "restarted") {
             setImage(ImageBlank);
             setIsButtonDisabled(false);
-            startGame();
         }
     }, [gameStage]);
 
@@ -60,7 +59,7 @@ function Button(props: propsType) {
                         className={styles.buttonDisabled}
                         disabled
                     >
-                        <img
+                        <img  
                             className={styles.img}
                             src={image}
                             alt=""
